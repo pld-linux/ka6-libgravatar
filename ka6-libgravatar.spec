@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		libgravatar
 Summary:	Gravatar library
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	0c9602d38f933e2f5ae167d3fae3545c
+# Source0-md5:	def6c097073b2d644cba19e3befc0831
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -89,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKPim6Gravatar.so.*.*
+%{_libdir}/libKPim6Gravatar.so.*.*
 %ghost %{_libdir}/libKPim6Gravatar.so.6
 %{_datadir}/qlogging-categories6/libgravatar.categories
 %{_datadir}/qlogging-categories6/libgravatar.renamecategories
